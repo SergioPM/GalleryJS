@@ -32,7 +32,7 @@ function shuffleGallery()
   while (currentIndex == newIndex);
   currentIndex = newIndex;
 
-  document.getElementById("picture").src = chico.picture;
-  document.getElementById("caption").innerHTML = chico.description;
-  document.getElementById("source").innerHTML = "Image courtesy of: " + chico.from;
+  document.getElementById("picture").src = chico[newIndex].picture;
+  document.getElementById("caption").innerHTML = chico[newIndex].description;
+  document.getElementById("source").innerHTML = "Image courtesy of: " + chico[newIndex].from;
   }
