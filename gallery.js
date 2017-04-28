@@ -10,17 +10,18 @@ var chico = [
  {description:"Downtown",
  picture:"http://www.downtownchico.com/webart/downtown-chico.jpg",
  from:"downtownchico.com",
- }
+ },
  {discription:"Chico Museum",
   picture:"https://www.downtownchico.com/webart/listings/x277.jpg.pagespeed.ic.0Zz6o3DCeV.jpg",
   from:"downtownchico.com",
- }
+},
  {description:"Science Museum",
   picture:"https://media-cdn.tripadvisor.com/media/photo-s/04/bd/1c/e3/gateway-science-museum.jpg",
   from:"tripadvisor.com",
- }
+},
 ];
-var index = 1000;
+
+var currentindex = 1000;
 function shuffleGallery()
 {
   var arrayLength = chico.length;
@@ -30,5 +31,8 @@ function shuffleGallery()
   }
   while (currentIndex == newIndex);
   currentIndex = newIndex;
-  console.log(chico[newIndex]);
-}
+
+  document.getElementById("picture").src = chico.picture;
+  document.getElementById("caption").innerHTML = chico.description;
+  document.getElementById("source").innerHTML = "Image courtesy of: " + chico.from;
+  }
